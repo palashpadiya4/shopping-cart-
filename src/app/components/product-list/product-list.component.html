@@ -1,0 +1,15 @@
+<div>
+    <mat-card>
+        <mat-card-content>
+            <form #addProductForm="ngForm" (ngSubmit)="addNewProduct(newProduct)">
+                <mat-form-field>
+                    <input matInput placeholder="Add product" [(ngModel)]="newProduct" name="newProduct" required>
+                </mat-form-field>
+                <button mat-raised-button color="primary" [disabled]="!addProductForm.form.valid">Add</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+    <mat-list>
+        <mat-list-item *ngFor="let product of selectedProducts"> {{product}} </mat-list-item>
+    </mat-list>
+</div>

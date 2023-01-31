@@ -1,0 +1,247 @@
+<p>
+  <mat-toolbar color="primary">
+    <button
+      routerLink="/"
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Shopperia</span>
+
+    <mat-icon>shopping_cart</mat-icon>
+    <span class="example-spacer"></span>
+
+    <a
+      *ngIf="!isLoggedIn"
+      routerLink="login"
+      mat-icon-button
+      class="example-icon favorite-icon mr10"
+      aria-label="Example icon-button with heart icon"
+    >
+      Login
+    </a>
+
+    <a
+      *ngIf="isLoggedIn"
+      (click)="logout()"
+      mat-icon-button
+      class="example-icon favorite-icon mr10"
+      aria-label="Example icon-button with heart icon"
+    >
+      Logout
+    </a>
+    <a
+      *ngIf="!isLoggedIn"
+      routerLink="signup"
+      mat-icon-button
+      class="example-icon mr20"
+      aria-label="Example icon-button with share icon"
+    >
+      Register
+    </a>
+    <button
+      *ngIf="isLoggedIn && user"
+      mat-icon-button
+      class="example-icon favorite-icon mr10"
+      mat-button
+      routerLink="/admin/profile"
+      aria-label="Example icon-button with heart icon"
+    >
+      {{ login.getUser().username }}
+    </button>
+  </mat-toolbar>
+<mat-toolbar
+     
+      fxlayoutalign=""
+      color=""
+      class="mat-toolbar top-navbar mat-elevation-z2 mat-toolbar-single-row"
+      style="
+        place-content: stretch flex-start;
+        align-items: stretch;
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+      "
+      ><a
+      
+        mat-button=""
+        routerlinkactive="horizontal-active-link"
+        class="mat-focus-indicator mat-button mat-button-base ng-star-inserted"
+        tabindex="0"
+        aria-disabled="false"
+        href="/"
+        ><span class="mat-button-wrapper"
+          ><mat-icon
+         
+            role="img"
+            color="primary"
+            aria-hidden="false"
+            aria-label="Spurtcommerce Home Icon"
+            class="mat-icon notranslate mat-primary material-icons"
+            style="font-size: 25px"
+            data-mat-icon-type="font"
+            >home</mat-icon
+          ></span
+        ><span matripple="" class="mat-ripple mat-button-ripple"></span
+        ><span class="mat-button-focus-overlay"></span></a
+      ><!----><a
+        
+        mat-button=""
+        routerlinkactive="horizontal-active-link"
+        class="mat-focus-indicator mat-menu-trigger colorMenu mat-button mat-button-base ng-star-inserted"
+        style="font-weight: 500; font-family: Roboto, Arial, sans-serif"
+        tabindex="0"
+        aria-disabled="false"
+        href="/products"
+        aria-haspopup="true"
+        ><span class="mat-button-wrapper"
+          >Electronics
+          <mat-icon
+           
+            role="img"
+            class="mat-icon notranslate caret material-icons mat-icon-no-color"
+            aria-hidden="true"
+            data-mat-icon-type="font"
+            >keyboard_arrow_down</mat-icon
+          ></span
+        ><span matripple="" class="mat-ripple mat-button-ripple"></span
+        ><span class="mat-button-focus-overlay"></span></a
+      ><!----><a
+        mat-button=""
+        routerlinkactive="horizontal-active-link"
+        class="mat-focus-indicator mat-menu-trigger colorMenu mat-button mat-button-base ng-star-inserted"
+        style="font-weight: 500; font-family: Roboto, Arial, sans-serif"
+        tabindex="0"
+        aria-disabled="false"
+        href="/products"
+        aria-haspopup="true"
+        ><span class="mat-button-wrapper"
+          >Mens Fashion
+          <mat-icon
+           
+            role="img"
+            class="mat-icon notranslate caret material-icons mat-icon-no-color"
+            aria-hidden="true"
+            data-mat-icon-type="font"
+            >keyboard_arrow_down</mat-icon
+          ></span
+        ><span matripple="" class="mat-ripple mat-button-ripple"></span
+        ><span class="mat-button-focus-overlay"></span></a
+      ><!----><a
+      
+        mat-button=""
+        routerlinkactive="horizontal-active-link"
+        class="mat-focus-indicator mat-menu-trigger colorMenu mat-button mat-button-base ng-star-inserted"
+        style="font-weight: 500; font-family: Roboto, Arial, sans-serif"
+        tabindex="0"
+        aria-disabled="false"
+        href="/products"
+        aria-haspopup="true"
+        ><span class="mat-button-wrapper"
+          >Womens Fashion
+          <mat-icon
+           
+            role="img"
+            class="mat-icon notranslate caret material-icons mat-icon-no-color"
+            aria-hidden="true"
+            data-mat-icon-type="font"
+            >keyboard_arrow_down</mat-icon
+          ></span
+        ><span matripple="" class="mat-ripple mat-button-ripple"></span
+        ><span class="mat-button-focus-overlay"></span></a
+      ><!----><a
+       
+        mat-button=""
+        routerlinkactive="horizontal-active-link"
+        class="mat-focus-indicator mat-menu-trigger colorMenu mat-button mat-button-base ng-star-inserted"
+        style="font-weight: 500; font-family: Roboto, Arial, sans-serif"
+        tabindex="0"
+        aria-disabled="false"
+        href="/products"
+        aria-haspopup="true"
+        ><span class="mat-button-wrapper"
+          >Baby &amp; Kids
+          <mat-icon
+          
+            role="img"
+            class="mat-icon notranslate caret material-icons mat-icon-no-color"
+            aria-hidden="true"
+            data-mat-icon-type="font"
+            >keyboard_arrow_down</mat-icon
+          ></span
+        ><span matripple="" class="mat-ripple mat-button-ripple"></span
+        ><span class="mat-button-focus-overlay"></span></a
+      ><!----><a
+      
+        mat-button=""
+        routerlinkactive="horizontal-active-link"
+        class="mat-focus-indicator mat-menu-trigger colorMenu mat-button mat-button-base ng-star-inserted"
+        style="font-weight: 500; font-family: Roboto, Arial, sans-serif"
+        tabindex="0"
+        aria-disabled="false"
+        href="/products/home-furniture"
+        aria-haspopup="true"
+        ><span class="mat-button-wrapper"
+          >Home &amp; Furniture
+          <mat-icon
+          
+            role="img"
+            class="mat-icon notranslate caret material-icons mat-icon-no-color"
+            aria-hidden="true"
+            data-mat-icon-type="font"
+            >keyboard_arrow_down</mat-icon
+          ></span
+        ><span matripple="" class="mat-ripple mat-button-ripple"></span
+        ><span class="mat-button-focus-overlay"></span></a
+      ><!----><a
+   
+        mat-button=""
+        routerlinkactive="horizontal-active-link"
+        class="mat-focus-indicator mat-menu-trigger colorMenu mat-button mat-button-base ng-star-inserted"
+        style="font-weight: 500; font-family: Roboto, Arial, sans-serif"
+        tabindex="0"
+        aria-disabled="false"
+        href="/products/sports-book-and-more"
+        aria-haspopup="true"
+        ><span class="mat-button-wrapper"
+          >Sports, Books and More
+          <mat-icon
+            
+            role="img"
+            class="mat-icon notranslate caret material-icons mat-icon-no-color"
+            aria-hidden="true"
+            data-mat-icon-type="font"
+            >keyboard_arrow_down</mat-icon
+          ></span
+        ><span matripple="" class="mat-ripple mat-button-ripple"></span
+        ><span class="mat-button-focus-overlay"></span></a
+      ><a
+       
+        mat-button=""
+        routerlink="/blogs"
+        routerlinkactive="horizontal-active-link"
+        class="mat-focus-indicator mat-button mat-button-base"
+        style="font-weight: 500; font-family: Roboto, Arial, sans-serif"
+        tabindex="0"
+        aria-disabled="false"
+        href="/blogs"
+        ><span class="mat-button-wrapper">Blogs</span
+        ><span matripple="" class="mat-ripple mat-button-ripple"></span
+        ><span class="mat-button-focus-overlay"></span></a
+      ><a
+      
+        mat-button=""
+        routerlink="/contact"
+        routerlinkactive="horizontal-active-link"
+        class="mat-focus-indicator mat-button mat-button-base"
+        style="font-weight: 500; font-family: Roboto, Arial, sans-serif"
+        tabindex="0"
+        aria-disabled="false"
+        href="/contact"
+        ><span class="mat-button-wrapper">Contact</span
+        ><span matripple="" class="mat-ripple mat-button-ripple"></span
+        ><span class="mat-button-focus-overlay"></span></a></mat-toolbar
+  >
+</p>

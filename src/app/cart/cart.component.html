@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="card-table">
+    <div class="cart-product">
+      <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th>Product Image</th>
+            <th>id</th>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>price</th>
+             <th>quantity</th>
+
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products; let i = index">
+            <td>  <img style="width: 120px;" src="https://cdn5.vectorstock.com/i/thumb-large/18/04/new-product-speech-bubble-with-3d-effect-vector-33661804.jpg" spl class="image" /></td>
+            <td>{{ i + 1 }}</td>
+            <td>{{ product.name }}</td>
+
+            <td style="width: 25%">{{ product.description }}</td>
+            
+            <td style="width: 12%">{{ product.price }}</td>
+            <td>1</td>
+            <td><button routerLink="/checkout" mat-raised-button color="primary">Checkout</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

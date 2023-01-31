@@ -1,0 +1,212 @@
+<!-- <h4>Products</h4>
+
+<mat-selection-list #products>
+    <mat-list-option *ngFor="let product of productList" (click)="saveSelectedOption(product)">
+        {{product}}
+    </mat-list-option>
+</mat-selection-list>
+
+<p>
+    Number of product selected: {{products.selectedOptions.selected.length}}
+</p>
+
+<p>
+    Selected products: {{selectedProductList.toString()}}
+</p>
+
+<div>
+    <button (click)="goToCart()">Go to cart</button>
+</div> -->
+
+<div class="cart-top container-fluid">
+  <div class="container d-flex">
+    <div class="items">
+      <a>
+        <img src="../../../assets/All.jpg" alt="" />
+        <h6>All</h6>
+      </a>
+    </div>
+    <div class="items">
+      <a>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvAN_BXDAUab-akGqRpeUQTif9AczvPYyXIQ&usqp=CAU"
+          alt=""
+        />
+        <h6>Mobiles</h6>
+      </a>
+    </div>
+    <div class="items">
+      <a>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOGpjLP9sAzw3vDeUmhx7CQZxJAn1wUmxLhw&usqp=CAU"
+          alt=""
+        />
+        <h6>Electronics</h6>
+      </a>
+    </div>
+    <div class="items">
+      <a>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRInwp3KwXrDSLlYu5VB6A5wwEG-yblJD_EOw&usqp=CAU"
+          alt=""
+        />
+        <h6>Laptops</h6>
+      </a>
+    </div>
+    <div class="items">
+      <a>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdeVR36L4bLlswYEzqGqqjHujed5qaYR5kOQ&usqp=CAU"
+          alt=""
+        />
+        <h6>Men Fashion</h6>
+      </a>
+    </div>
+    <div class="items">
+      <a>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqngG33rwFdcNrs9kuGneMyzZO_dK2WNkq1w&usqp=CAU"
+          alt=""
+        />
+        <h6>Women Fashion</h6>
+      </a>
+    </div>
+    <div class="items">
+      <a>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj8BikgJnVitpIZMMgBv7M8QoHTFCPFu4EtQ&usqp=CAU"
+          alt=""
+        />
+        <h6>Watches</h6>
+      </a>
+    </div>
+    <div class="items">
+      <a>
+        <img src="../../../assets/Acc.jpg" alt="" />
+        <h6>Accessories</h6>
+      </a>
+    </div>
+    <div class="items">
+      <a>
+        <img src="../../../assets/grocery.jpg" alt="" />
+        <h6>Grocery</h6>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<div
+
+  fxlayout="row"
+  fxlayout.xs="column"
+  fxlayoutalign="space-between center"
+  class="filter-row mat-elevation-z1 text-muted"
+  style="
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center space-between;
+    align-items: center;
+  "
+>
+  <!---->
+  <div  class="flex sortby mt-5">
+    <p>Sort By</p>
+    <a
+      
+      
+      class="ng-star-inserted"
+      >Price Low To High</a
+    ><!----><a
+    
+    
+      class="ng-star-inserted  "
+      >Price High To Low</a
+    ><!----><!---->
+  </div>
+  <div  class="list-grid">
+    <button
+    
+      mat-icon-button=""
+      class="mat-focus-indicator mat-icon-button mat-button-base"
+    >
+      <span class="mat-button-wrapper"
+        ><!----><mat-icon
+        
+          role="img"
+          aria-hidden="false"
+         
+          class="mat-icon notranslate material-icons mat-icon-no-color ng-star-inserted"
+          style="font-size: 25px"
+          data-mat-icon-type="font"
+          >list</mat-icon
+        ><!----><!----></span
+      ><span
+        matripple=""
+        class="mat-ripple mat-button-ripple mat-button-ripple-round"
+      ></span
+      ><span class="mat-button-focus-overlay"></span></button
+    ><button
+     
+      mat-icon-button=""
+      class="mat-focus-indicator mat-icon-button mat-button-base"
+    >
+      <span class="mat-button-wrapper"
+        ><!----><mat-icon
+         
+          role="img"
+          color="primary"
+          aria-hidden="false"
+          aria-label="Spurtcommerce Grid Icon"
+          class="mat-icon notranslate mat-primary material-icons ng-star-inserted"
+          style="font-size: 25px"
+          data-mat-icon-type="font"
+          >apps</mat-icon
+        ><!----><!----></span
+      ><span
+        matripple=""
+        class="mat-ripple mat-button-ripple mat-button-ripple-round"
+      ></span
+      ><span class="mat-button-focus-overlay"></span>
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 maindiv">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let product of productList">
+        <div class="card mt-5">
+          <div class="card-body">
+            <img
+              src="https://cdn5.vectorstock.com/i/thumb-large/18/04/new-product-speech-bubble-with-3d-effect-vector-33661804.jpg"
+              spl
+              class="image"
+            />
+            <h1 class="title text-center">{{ product.name }}</h1>
+            <h1 class="title text-center">{{ product.category }}</h1>
+            <h1 class="title text-center">
+              price:₹{{ product.price.toString() }}
+            </h1>
+            <h1 class="title text-center">
+              description: {{ product.description }}
+            </h1>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="text-center">
+                  
+                  <button class="btn btn-primary" (click)="addtoCart(product)">
+                    Add to cart 
+                  </button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" (click)="goToCart()">Go to cart</button>
+    </div>
+  </div>
+</div>

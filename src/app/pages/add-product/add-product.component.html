@@ -1,0 +1,54 @@
+<!-- <div>
+    <mat-card>
+        <mat-card-content>
+            <form #addProductForm="ngForm" (ngSubmit)="addNewProduct(newProduct)">
+                <mat-form-field>
+                    <input matInput placeholder="Add product" [(ngModel)]="newProduct" name="newProduct" required>
+                </mat-form-field>
+                <button mat-raised-button color="primary" [disabled]="!addProductForm.form.valid">Add</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+    <mat-list>
+        <mat-list-item *ngFor="let product of selectedProducts"> {{product}} </mat-list-item>
+    </mat-list>
+</div> -->
+<form #addProductForm="ngForm" (ngSubmit)="addNewProduct(newProduct)">
+    <div class="col-md-6">
+      <label for="input" class="form-label">name</label>
+      <input type="text" class="form-control" >
+    </div>
+    <br>
+  
+    <div class="col-md ">
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+            <option selected>category</option>
+            <option value="1">Mobiles</option>
+            <option value="2">Electronics</option>
+            <option value="3">Men Fashion</option>
+            <option value="4">Women Fashion</option>
+            <option value="5">Grocery</option>
+          </select>
+          <label for="floatingSelectGrid">Works with selects</label>
+        </div>
+      </div>
+ 
+  
+    <div class="col-md-6">
+        <label for="input" class="form-label">description</label>
+        <input type="text" class="form-control" id="input">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">price</label>
+        <input  class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">productid</label>
+        <input  class="form-control">
+      </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary"  (click)=addNewProduct>Add product</button>
+    </div>
+  </form>

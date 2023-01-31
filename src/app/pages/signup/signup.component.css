@@ -1,0 +1,14 @@
+.full-width{
+    width: 100%;
+}
+.image{
+    border-radius: 50%;
+    height: 140px; ;
+}
+.mat-card{
+    border:  solid  #1a386c;
+}
+
+.alread-acc{
+    margin-top: 13px;
+}

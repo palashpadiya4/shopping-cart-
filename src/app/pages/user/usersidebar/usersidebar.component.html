@@ -1,0 +1,20 @@
+<mat-card>
+
+    <mat-action-list>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDLqYHjPpOu9kW16YRIoEjYf7WqB3yz1qTQw&usqp=CAU" alt="Logo">
+
+        <div  style="color: aliceblue;" mat-subheader>Menu</div>
+        <button style="color: aliceblue;" mat-list-item  routerLink="/user-dashboard"><mat-icon mat-list-icon> home</mat-icon>Home</button>
+        <button  style="color: aliceblue;" mat-list-item  routerLink="/user-dashboard/userprofile">
+            <mat-icon mat-list-icon> account_circle</mat-icon>Profile</button>
+       
+      
+        <button  style="color: aliceblue;" mat-list-item  routerLink="/user-dashboard/product"><mat-icon mat-list-icon> inventory</mat-icon>Products</button>
+     
+    
+        <button style="color: aliceblue;" mat-list-item (click)="logout()"><mat-icon mat-list-icon>logout</mat-icon>Logout</button>
+    </mat-action-list>
+    
+    
+    
+    </mat-card>

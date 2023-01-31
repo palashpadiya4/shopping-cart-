@@ -1,0 +1,24 @@
+.full-width{
+    width: 100%;
+}
+img{
+    border-radius: 50%;
+    height: 140px; ;
+}
+
+.mat-card{
+    border:  solid  #1a386c;
+}
+
+body{
+    background-image: url("https://t3.ftcdn.net/jpg/02/92/90/56/360_F_292905667_yFUJNJPngYeRNlrRL4hApHWxuYyRY4kN.jpg");
+}
+
+.alread-acc{
+    margin-top: 13px;
+}
+.fgtpwd{
+    margin-left: 170px;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}

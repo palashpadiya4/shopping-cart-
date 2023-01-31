@@ -1,0 +1,77 @@
+<mat-card *ngIf="user">
+
+    <h1>
+        Your Profile Details</h1>
+
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+
+
+            <div class="container">
+                <div class="container text-center">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1fYaY9LEjaK0yhT3WsncM36y6MD9sLCHU4A&usqp=CAU"
+                        alt="" class="profile-image ">
+                    <h1 class="ml20">{{user.firstName}} {{user.lastName}}</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <mat-card>
+                            <table class="table text-center">
+
+                                <tr>
+                                    <td>Username</td>
+                                    <td> {{user.username}}</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Userid</td>
+                                    <td>{{user.id}}</td>
+
+                                </tr>
+                                <tr>
+                                    <td>phone</td>
+                                    <td>{{user.phone}}</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Role</td>
+                                    <td>{{user.authorities[0].authority}}</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Status</td>
+                                    <td>{{user.enabled?"ACTIVE":"NOTACTIVE"}}</td>
+
+                                </tr>
+
+
+
+
+                            </table>
+                        </mat-card>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </mat-card-content>
+
+    <mat-card-actions class="text-center">
+        <button mat-raised-button color="primary">Update </button>
+        <button mat-raised-button color="accent">Share</button>
+
+
+
+
+    </mat-card-actions>
+
+
+
+</mat-card>
